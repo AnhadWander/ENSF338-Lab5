@@ -1,6 +1,6 @@
 import sys
 
-def evaluate_expression(exp):
+def eva_exp(exp):
     stack = []
     exp = exp.replace("(", " ( ")
     exp = exp.replace(")", " ) ")
@@ -11,16 +11,16 @@ def evaluate_expression(exp):
         if i == ")":
             num2 = stack.pop()
             num1 = stack.pop()
-            op = stack.pop()
+            opr = stack.pop()
             stack.pop() 
 
-            if op == "+":
+            if opr == "+":
                 stack.append(num1 + num2)
-            elif op == "-":
+            elif opr == "-":
                 stack.append(num1 - num2)
-            elif op == "*":
+            elif opr == "*":
                 stack.append(num1 * num2)
-            elif op == "/":
+            elif opr == "/":
                 stack.append(int(num1 / num2))
         elif i.isdigit() or (i[0] == "-" and i[1:].isdigit()):
             stack.append(int(i))
@@ -31,6 +31,6 @@ def evaluate_expression(exp):
 
 
 
-expression = sys.argv[1]
-result = evaluate_expression(expression)
-print(result)
+exp = sys.argv[1]
+ans = eval_exp(exp)
+print(ans)
