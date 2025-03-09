@@ -1,6 +1,6 @@
 import sys
 
-def eva_exp(exp):
+def eval_exp(exp):
     stack = []
     exp = exp.replace("(", " ( ")
     exp = exp.replace(")", " ) ")
