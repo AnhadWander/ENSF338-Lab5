@@ -58,3 +58,7 @@ plt.ylabel('Time (seconds)')
 plt.title('Performance of Stack Implementations')
 plt.legend()
 plt.savefig('Performance.jpeg')
+
+
+""" The Array Stack has lower time as compared to the Linked List Stack becuase the 
+append and pop operations have O(1) complexity."""
